@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class PrimeChecker {
 
     public static void main(String[] args) {
-        // Standard way to get data from the keyboard [4, 5]
+        // Standard way to get data from the keyboard 
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please enter a positive integer: ");
@@ -27,12 +27,12 @@ public class PrimeChecker {
             System.out.println("That is not a valid integer.");
         }
 
-        scanner.close(); // Closing the scanner to be neat [6]
+        scanner.close(); // Closing the scanner to be neat 
     }
 
     /**
      * This method tests primality using a while loop.
-     * Logic: A prime number is only divisible by 1 and itself [7].
+     * Logic: A prime number is only divisible by 1 and itself .
      */
     public static boolean verifyIfPrime(int n) {
         // Numbers less than 2 are never prime
@@ -41,15 +41,15 @@ public class PrimeChecker {
         }
 
         int divisor = 2;
-        boolean foundDivisor = false; // This is my flag variable [8]
+        boolean foundDivisor = false; // This is my flag variable 
 
         // We check divisors while the condition is true and no divisor is found
         while (divisor * divisor <= n && !foundDivisor) {
-            // Using modulo (%) to check for zero remainder [9]
+            // Using modulo (%) to check for zero remainder 
             if (n % divisor == 0) {
                 foundDivisor = true;
             }
-            divisor++; // Incrementing the counter [10]
+            divisor++; // Incrementing the counter 
         }
 
         // If foundDivisor is still false, it means it's prime
